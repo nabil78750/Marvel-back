@@ -1,11 +1,11 @@
-const mangoose = require("mongoose");
+const mongoose = require("mongoose");
 
-const User = mangoose.model("User", {
+const User = mongoose.model("User", {
   email: String,
   username: String,
-  token: String,
-  hash: String,
-  salt: String,
+  // token: String,
+  // hash: String,
+  // salt: String,
 });
 
 module.exports = User;
