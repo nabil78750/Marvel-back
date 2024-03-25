@@ -81,7 +81,7 @@ router.post("/user/login", async (req, res) => {
     const newHash = encBase64.stringify(SHA256(saltPassword));
 
     if (newHash === userFound.hash) {
-      return res.status(20).json({
+      return res.status(200).json({
         _id: userFound._id,
         token: userFound.token,
         username: userFound.username,
