@@ -17,6 +17,10 @@ app.use(comicsRoutes);
 const userRoutes = require("./routes/user");
 app.use(userRoutes);
 
+app.all("*"),
+  (req, res) => {
+    res.statue(404).json({ message: "This route dose not exist" });
+  };
 app.listen(process.env.PORT, () => {
   console.log("Serveur started");
 });
