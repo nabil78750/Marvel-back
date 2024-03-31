@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
-mongoose.connect("mongodb://localhost:27017/Marvel");
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 app.use(express.json());
